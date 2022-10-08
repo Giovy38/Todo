@@ -84,9 +84,30 @@ body{
         @include flexCenter;
         flex-direction: column;
         gap: 5px;
+        width: 80%;
+        box-shadow: 5px 5px 10px black;
+        padding: 10px;
+        border-radius: 5px;
 
-        #my-li{
+        .my-todo{
             margin-right: 5px;
+            display: flex;
+            width: 80%;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 5px 5px 10px black;
+            margin: 10px 0;
+            padding: 0 1rem;
+            border-radius: 20px;
+            
+
+
+            h3{
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+
         }
 
     }

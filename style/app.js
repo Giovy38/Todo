@@ -21,26 +21,28 @@ todoButton.addEventListener('click', addClick);
 
 function addClick(){
 
-    if(todoInput.value !== 'Insert here the task you want to do' && todoInput.value !== ' '){
+    if(todoInput.value !== ""){
         // prendiamo il valore dall'inputbox
         let taskValue = todoInput.value;
-        // creiamo il checkbox
-        let myCheck = document.createElement('input');
-        myCheck.className = 'todo-task-item';
-        myCheck.type = 'checkbox';
-        // creiamo il label
-        let myLabel = document.createElement('label');
-        myLabel.className = 'todo-task-item'
-        myLabel.appendChild(document.createTextNode(taskValue));
-        // creiamo l'hgroup
-        let myGroup = document.createElement('hgroup');
-        //aggiungiamo gli elementi
-        document.getElementById('todo-list').appendChild(myGroup);
-        myGroup.appendChild(myCheck);
-        myGroup.appendChild(myLabel);
+        // creiamo li
+       const li = document.createElement('li');
+       li.className = 'my-todo';
+       li.appendChild(document.createTextNode(taskValue));
+        // creiamo a
+        const link = document.createElement('a');
+        link.className = 'todo-remove';
+        link.innerHTML = '<h3>X</h3>';
+        // passiamo la a all' li 
+        li.appendChild(link);
+
+        // prendiamo l'ul
+        const todoList = document.getElementById('todo-list');
+        todoList.appendChild(li);
+
+        todoInput.value = '';
     }
 
-    todoInput.value = '';
+    
 }
 
 // button remove
@@ -49,7 +51,7 @@ function addClick(){
     removeButton.addEventListener('click', remClick);
 
     function remClick(){
-        const taskRemove = document.getElementsByClassName('todo-task-item');
+        const taskRemove = document.getElementsByClassName('my-todo');
 
         const taskRemoveArray = Array.from(taskRemove);
         
