@@ -60,3 +60,12 @@ function addClick(){
         }
     }
 
+//remove single task 
+const todoList = document.getElementById('todo-list');
+todoList.addEventListener('click', removeSingleTask);
+
+function removeSingleTask(e){
+    if(e.target.parentElement.classList.contains('todo-remove')){
+        e.target.parentElement.parentElement.remove();
+    }
+} 
