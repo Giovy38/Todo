@@ -4,15 +4,16 @@
   box-sizing: border-box;
 }
 
+.font-awesome {
+  font-family: "Megrim", cursive;
+}
+
 .header {
   background: linear-gradient(to right, #FD5858, #E34F99, #FA64FA, #BB4FE3, #A358FD);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 13px 0 25px 0;
-}
-.header h1 {
-  font-family: "Megrim", cursive;
 }
 
 .todo-insert-container {
@@ -70,6 +71,10 @@ body {
   align-items: center;
   justify-content: center;
   padding-top: 50px;
+  font-size: 32px;
+  flex-direction: column;
+}
+.todo-list-container h1 {
   font-size: 32px;
 }
 .todo-list-container ul {

@@ -7,14 +7,15 @@
     box-sizing: border-box;
 }
 
+.font-awesome{
+    font-family: 'Megrim', cursive;
+}
+
 
 .header{
     background:$background-1;
     @include flexCenter;
     padding: 13px 0 25px 0;
-    h1{
-        font-family: 'Megrim', cursive;
-    }
 }
 
 .todo-insert-container{
@@ -74,6 +75,11 @@ body{
     @include flexCenter;
     padding-top: 50px;
     font-size: 32px;
+    flex-direction: column;
+
+    h1{
+        font-size: 32px;
+    }
     ul{
         @include flexCenter;
         flex-direction: column;
