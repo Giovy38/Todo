@@ -1,13 +1,11 @@
 // text of the inputbox 
 const todoInput = document.getElementById('todo-input');
 
-
-todoInput.addEventListener('focus', removeText);
 todoInput.addEventListener('keypress', function(event){
     if (event.key === "Enter"){
         event.preventDefault();
         addClick();
-        removeText();
+        todoInput.value = '';
     }
 });
 
@@ -15,9 +13,6 @@ function removeText(){
     todoInput.value = ' '
 }
 
-function addText(){
-    todoInput.value = 'Insert here the task you want to do'
-}
 
 // button add
 const todoButton = document.getElementById('todo-button');
@@ -45,7 +40,7 @@ function addClick(){
         myGroup.appendChild(myLabel);
     }
 
-    todoInput.value = 'Insert here the task you want to do'
+    todoInput.value = '';
 }
 
 // button remove
