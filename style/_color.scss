@@ -1,0 +1,36 @@
+// header background color 
+    $bg1:#FD5858;
+    $bg2:#E34F99;
+    $bg3:#FA64FA;
+    $bg4:#BB4FE3;
+    $bg5:#A358FD;
+
+    $background-1: linear-gradient(to right, $bg1,$bg2,$bg3,$bg4,$bg5);
+
+// background color
+    $bgc1: #7A317A;
+    $bgc2: #FBB0FB;
+    $bgc3: #FA64FA;
+    $bgc4: #7A567A;
+    $bgc5: #C750C7;
+
+    $background-2: linear-gradient(to right,$bgc1,$bgc2,$bgc3,$bgc4,$bgc5);
+
+// add button 
+
+    $add_button1:#096B0D;
+    $add_button2:#5AEE62;
+    $add_button3:#13EB1E;
+    $add_button4:#4fbc55;
+    $add_button5:#0FB817;
+
+    $add_button_color: linear-gradient(to right, $add_button1,$add_button2,$add_button3,$add_button4,$add_button5);
+
+// remove button 
+    $remove_button1: #6B1609;
+    $remove_button2: #812d21;
+    $remove_button3: #EB3013;
+    $remove_button4: #b53b28;
+    $remove_button5: #B8250F;
+
+    $remove_button_color: linear-gradient(to right, $remove_button1,$remove_button2,$remove_button3,$remove_button4,$remove_button5);

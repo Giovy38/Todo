@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: linear-gradient(to right, #FD5858, #E34F99, #FA64FA, #BB4FE3, #A358FD);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0 25px 0;
+}
+.header h1 {
+  font-family: "Megrim", cursive;
+}
+
+.todo-insert-container {
+  background: linear-gradient(to right, #7A317A, #FBB0FB, #FA64FA, #7A567A, #C750C7);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px 0 35px 0;
+  gap: 15px;
+  box-shadow: 0px 5px 10px black, 0px -5px 10px black;
+}
+.todo-insert-container #todo-input {
+  border-radius: 15px;
+  height: 40px;
+  width: 600px;
+  box-shadow: 5px 5px 10px black;
+  text-align: center;
+  color: grey;
+  border: none;
+  font-style: italic;
+}
+.todo-insert-container .button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 5px 5px 10px black;
+}
+.todo-insert-container #todo-button {
+  font-weight: bold;
+  background: linear-gradient(to right, #096B0D, #5AEE62, #13EB1E, #4fbc55, #0FB817);
+}
+.todo-insert-container #todo-button:hover {
+  background: linear-gradient(to right, #FD5858, #E34F99, #FA64FA, #BB4FE3, #A358FD);
+  box-shadow: 5px 5px 10px #FBB0FB;
+}
+.todo-insert-container #remove-button {
+  background: linear-gradient(to right, #6B1609, #812d21, #EB3013, #b53b28, #B8250F);
+  color: white;
+  font-weight: bold;
+}
+.todo-insert-container #remove-button:hover {
+  background: linear-gradient(to right, #FD5858, #E34F99, #FA64FA, #BB4FE3, #A358FD);
+  box-shadow: 5px 5px 10px #FBB0FB;
+}
+
+body {
+  background: linear-gradient(to right, #FD5858, #E34F99, #FA64FA, #BB4FE3, #A358FD);
+}
+
+.todo-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 32px;
+}
+.todo-list-container ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+.todo-list-container ul #my-li {
+  margin-right: 5px;
+}/*# sourceMappingURL=style.css.map */
