@@ -1,5 +1,8 @@
 // text of the inputbox 
+//prendiamo l'inputbox
 const todoInput = document.getElementById('todo-input');
+//prendiamo l'ul
+const todoList = document.getElementById('todo-list');
 
 todoInput.addEventListener('keypress', function(event){
     if (event.key === "Enter"){
@@ -35,8 +38,7 @@ function addClick(){
         // passiamo la a all' li 
         li.appendChild(link);
 
-        // prendiamo l'ul
-        const todoList = document.getElementById('todo-list');
+        // inseriamo li nell'ul
         todoList.appendChild(li);
 
         todoInput.value = '';
@@ -61,7 +63,7 @@ function addClick(){
     }
 
 //remove single task 
-const todoList = document.getElementById('todo-list');
+
 todoList.addEventListener('click', removeSingleTask);
 
 function removeSingleTask(e){
@@ -69,3 +71,24 @@ function removeSingleTask(e){
         e.target.parentElement.parentElement.remove();
     }
 } 
+
+// sign the done task 
+
+todoList.addEventListener('click', signDoneTask);
+let dashed = false;
+
+function signDoneTask(e){
+    if(e.target.classList.contains('my-todo')){
+        const signLi = e.target;
+        if(dashed === false){
+            signLi.style.textDecoration = "line-through";
+            signLi.style.color = "#6B1609";
+            dashed = true;
+
+        } else {
+            signLi.style.textDecoration = "none";
+            signLi.style.color = "black";
+            dashed = false;
+        }
+    }
+}
