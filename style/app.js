@@ -92,3 +92,14 @@ function signDoneTask(e){
         }
     }
 }
+
+// change color
+
+const colorPicker = document.getElementById('color-picker-button');
+
+colorPicker.addEventListener('blur', colorChange);
+
+function colorChange(){
+    const headerElement = document.querySelector('.todo-insert-container');
+    headerElement.style.background = colorPicker.value ;
+}
