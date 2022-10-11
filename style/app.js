@@ -30,6 +30,7 @@ function addClick(){
         // creiamo li
        const li = document.createElement('li');
        li.className = 'my-todo';
+       li.classList.add('start-animation');
        li.appendChild(document.createTextNode(taskValue));
         // creiamo a
         const link = document.createElement('a');
@@ -82,13 +83,17 @@ function signDoneTask(e){
         const signLi = e.target;
         if(dashed === false){
             signLi.style.textDecoration = "line-through";
-            signLi.style.color = "#6B1609";
+            signLi.style.color = "#EB3013";
             dashed = true;
+            signLi.classList.add('done-task-bg');
+            signLi.classList.remove('start-animation');
+
 
         } else {
             signLi.style.textDecoration = "none";
             signLi.style.color = "black";
             dashed = false;
+            signLi.classList.remove('done-task-bg');
         }
     }
 }

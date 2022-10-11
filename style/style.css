@@ -113,4 +113,59 @@ body {
 .todo-list-container ul .my-todo h3 {
   font-size: 20px;
   cursor: pointer;
+}
+.todo-list-container ul .start-animation {
+  transition: all 3s;
+  -webkit-animation: todo-into 3s linear;
+          animation: todo-into 3s linear;
+}
+@-webkit-keyframes todo-into {
+  from {
+    opacity: 0;
+    top: 100px;
+    left: 50px;
+    position: fixed;
+  }
+  to {
+    opacity: 100%;
+    position: fixed;
+    top: 300px;
+  }
+}
+@keyframes todo-into {
+  from {
+    opacity: 0;
+    top: 100px;
+    left: 50px;
+    position: fixed;
+  }
+  to {
+    opacity: 100%;
+    position: fixed;
+    top: 300px;
+  }
+}
+.todo-list-container ul .done-task-bg {
+  -webkit-animation: color-task 3s linear forwards;
+          animation: color-task 3s linear forwards;
+}
+@-webkit-keyframes color-task {
+  from {
+    background: fixed;
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+    background: linear-gradient(to right, #096B0D, #136c17, #0b5f10, #114013, #1e6922);
+  }
+}
+@keyframes color-task {
+  from {
+    background: fixed;
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+    background: linear-gradient(to right, #096B0D, #136c17, #0b5f10, #114013, #1e6922);
+  }
 }/*# sourceMappingURL=style.css.map */
