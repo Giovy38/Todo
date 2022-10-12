@@ -109,10 +109,16 @@ function signDoneTask(e){
 // change color
 
 const colorPicker = document.getElementById('color-picker-button');
+const colorPicker2 = document.getElementById('color-picker-button2');
+
 
 colorPicker.addEventListener('blur', colorChange);
+colorPicker2.addEventListener('blur', colorChange);
 
 function colorChange(){
     const headerElement = document.querySelector('.todo-insert-container');
-    headerElement.style.background = colorPicker.value ;
+    // headerElement.style.background = colorPicker.value ;
+
+    headerElement.style.backgroundImage = 'linear-gradient(to right' + ',' + colorPicker.value + ',' + colorPicker2.value + ')';
+
 }

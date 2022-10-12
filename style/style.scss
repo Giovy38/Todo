@@ -79,6 +79,19 @@
         }
     }
 
+    #color-picker-button2{
+        padding: 0.3rem;
+
+        &:hover{
+            box-shadow: 5px 5px 10px $bgc2;
+        }
+
+        &::-webkit-color-swatch{
+            border-radius: 10px;
+            border: none;
+        }
+    }
+
 }
 
 body{

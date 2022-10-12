@@ -71,6 +71,16 @@
   border-radius: 10px;
   border: none;
 }
+.todo-insert-container #color-picker-button2 {
+  padding: 0.3rem;
+}
+.todo-insert-container #color-picker-button2:hover {
+  box-shadow: 5px 5px 10px #FBB0FB;
+}
+.todo-insert-container #color-picker-button2::-webkit-color-swatch {
+  border-radius: 10px;
+  border: none;
+}
 
 body {
   background: linear-gradient(to right, #FD5858, #E34F99, #FA64FA, #BB4FE3, #A358FD);
