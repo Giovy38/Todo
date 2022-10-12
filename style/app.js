@@ -3,6 +3,8 @@
 const todoInput = document.getElementById('todo-input');
 //prendiamo l'ul
 const todoList = document.getElementById('todo-list');
+// prendiamo il default color button 
+const DefaultColorButton = document.getElementById('default-color-button');
 
 todoInput.addEventListener('keypress', function(event){
     if (event.key === "Enter"){
@@ -117,8 +119,16 @@ colorPicker2.addEventListener('blur', colorChange);
 
 function colorChange(){
     const headerElement = document.querySelector('.todo-insert-container');
-    // headerElement.style.background = colorPicker.value ;
 
     headerElement.style.backgroundImage = 'linear-gradient(to right' + ',' + colorPicker.value + ',' + colorPicker2.value + ')';
 
 }
+
+// set default color on header 
+    DefaultColorButton.addEventListener('click', defaultColor);
+
+    function defaultColor(){
+        const headerElement = document.querySelector('.todo-insert-container');
+    
+        headerElement.style.backgroundImage = 'linear-gradient(to right' + ',' + '#7A317A' + ',' + '#FBB0FB' + ',' + '#FA64FA' + ',' + '#7A567A' + ',' + '#C750C7' + ')';
+    }

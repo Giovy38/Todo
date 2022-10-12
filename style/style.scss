@@ -92,6 +92,19 @@
         }
     }
 
+    #default-color-button{
+        background: $bgc1;
+        color: white;
+        font-weight: bold;
+        width: 90px;
+        &:hover{
+            background: $background-1;
+            box-shadow: 5px 5px 10px $bgc2;
+        }
+    }
+
+
+
 }
 
 body{
