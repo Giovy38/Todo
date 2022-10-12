@@ -156,7 +156,7 @@ body {
   }
   to {
     opacity: 100%;
-    background: linear-gradient(to right, #096B0D, #136c17, #0b5f10, #114013, #1e6922);
+    background: linear-gradient(to right, rgba(9, 107, 12, 0.6470588235), rgba(19, 108, 23, 0.6470588235), rgba(11, 95, 16, 0.6470588235), rgba(17, 64, 19, 0.6470588235), rgba(30, 105, 34, 0.6470588235));
   }
 }
 @keyframes color-task {
@@ -166,6 +166,50 @@ body {
   }
   to {
     opacity: 100%;
-    background: linear-gradient(to right, #096B0D, #136c17, #0b5f10, #114013, #1e6922);
+    background: linear-gradient(to right, rgba(9, 107, 12, 0.6470588235), rgba(19, 108, 23, 0.6470588235), rgba(11, 95, 16, 0.6470588235), rgba(17, 64, 19, 0.6470588235), rgba(30, 105, 34, 0.6470588235));
+  }
+}
+.todo-list-container ul .removing-effect {
+  -webkit-animation: remove-done-task 3s linear forwards;
+          animation: remove-done-task 3s linear forwards;
+}
+@-webkit-keyframes remove-done-task {
+  0% {
+    opacity: 100%;
+    position: relative;
+    right: 200px;
+  }
+  25% {
+    position: relative;
+    right: 400px;
+  }
+  50% {
+    position: relative;
+    right: 800px;
+  }
+  100% {
+    opacity: 0%;
+    position: relative;
+    right: 1000px;
+  }
+}
+@keyframes remove-done-task {
+  0% {
+    opacity: 100%;
+    position: relative;
+    right: 200px;
+  }
+  25% {
+    position: relative;
+    right: 400px;
+  }
+  50% {
+    position: relative;
+    right: 800px;
+  }
+  100% {
+    opacity: 0%;
+    position: relative;
+    right: 1000px;
   }
 }/*# sourceMappingURL=style.css.map */

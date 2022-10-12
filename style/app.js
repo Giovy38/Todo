@@ -40,7 +40,9 @@ function addClick(){
         li.appendChild(link);
 
         // inseriamo li nell'ul
-        todoList.appendChild(li);
+        
+        // todoList.appendChild(li);
+        todoList.insertBefore(li,todoList.firstChild);
 
         todoInput.value = '';
     }
@@ -69,7 +71,13 @@ todoList.addEventListener('click', removeSingleTask);
 
 function removeSingleTask(e){
     if(e.target.parentElement.classList.contains('todo-remove')){
-        e.target.parentElement.parentElement.remove();
+
+        e.target.parentElement.parentElement.classList.add('removing-effect');
+
+        setTimeout(function(){
+            e.target.parentElement.parentElement.remove();
+        }, 2500);
+        
     }
 } 
 
@@ -83,7 +91,7 @@ function signDoneTask(e){
         const signLi = e.target;
         if(dashed === false){
             signLi.style.textDecoration = "line-through";
-            signLi.style.color = "#EB3013";
+            signLi.style.color = "#e46a57";
             dashed = true;
             signLi.classList.add('done-task-bg');
             signLi.classList.remove('start-animation');

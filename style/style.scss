@@ -158,5 +158,30 @@ body{
             
         }
 
+        .removing-effect{
+            animation: remove-done-task 3s linear forwards;
+
+            @keyframes remove-done-task {
+                0%{
+                    opacity: 100%;
+                    position: relative;
+                    right: 200px;
+                }
+                25%{
+                    position: relative;
+                    right: 400px;
+                }
+                50%{
+                    position: relative;
+                    right: 800px;
+                }
+                100%{
+                    opacity: 0%;
+                    position: relative;
+                    right: 1000px;
+                }
+            }
+        }
+
     }
 }
