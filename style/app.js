@@ -26,9 +26,9 @@ todoButton.addEventListener('click', addClick);
 
 function addClick(){
 
-    if(todoInput.value !== ""){
+    if(todoInput.value.trim() !== ""){
         // prendiamo il valore dall'inputbox
-        let taskValue = todoInput.value;
+        let taskValue = todoInput.value.trim();
         // creiamo li
        const li = document.createElement('li');
        li.className = 'my-todo';
